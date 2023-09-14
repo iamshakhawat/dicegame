@@ -26,6 +26,7 @@ $("#dice").on("change",function(){
 });
 
 $("#rollbtn").click(function (e) { 
+    $("#rollbtn").prop("disabled",true);
     betamount = parseInt($("#betamount").val());
     if(coin >= betamount){
         $("#alert").html('');
@@ -46,19 +47,22 @@ $("#rollbtn").click(function (e) {
                 $("#dicepic").attr("src", "dice/"+randomNum+".svg");
                 $("#betamount").val([]);
                 $('#dice option:first').prop('selected',true);
+                $("#rollbtn").prop("disabled",false);
             }else{
                 coin -= betamount;
                 availablecoin.html(coin);
                 $("#dicepic").attr("src", "dice/"+randomNum+".svg");
                 $("#betamount").val([]);
                 $('#dice option:first').prop('selected',true);
+                $("#rollbtn").prop("disabled",false);
             }
         }
 
         setTimeout(result, 3000);
     }
     else{
+        $("#rollbtn").prop("disabled",false);
         $("#betamount").val([]);
-        $("#alert").html('<div  class="alert alert-danger fade show" role="alert"><strong>Insufficient Balance</strong> </div>');
+        $("#alert").html('<div  class="alert alert-danger fade show" role="alert"><strong>Insufficient Amount</strong> </div>');
     }
 });
