@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PHP</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+
+<body>
+
+
+    <div class="container">
+        <div class="col-md-12 mt-5 m-auto">
+            <div class="card">
+                <div class="card-body">
+                    <h1 class="text-center">Dice Rolling Game</h1>
+                    <hr>
+                    <div class="row justify-content-between">
+                        <div class="col-md-6">
+                            
+                        <h3><img height="40" src="Gold_coin_icon.png" alt="Coin"> <span class="text-danger" id="coin">0</span></h3>
+                        </div>
+                        <div class="col-md-5">
+                            <div id="depositeform" class="col-md-12 d-flex justify-content-bettween align-items-center">
+                                <input type="number" id="depositeAmount" class="form-control pr-5" placeholder="Deposite Amount" name="amount">
+                                <button type="button" id="depositeBtn" class="btn btn-primary">Deposite</button>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="text-center">
+                        <img height="120" id="dicepic" src="red dice.png" alt="dice">
+                        <h1 class="text-danger d"></h1>
+                        <div class="mb-3 mt-4">
+                            <div class="col-md-6 m-auto">
+
+                                <select id="dice" class="mb-3 form-control" id="dice">
+                                    <option value="">Select Dice</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                </select>
+                                <input type="number" id="betamount" class="form-control mb-3" placeholder="Bet Amount" name="amount">
+                            </div>
+                            <button type="button" id="rollbtn" disabled class="btn btn-info">Roll</button>
+                        </div>
+                        <div class="col-md-4 m-auto" id="alert">
+                            
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous">
+    </script>
+    <script src="app.js"></script>
+</body>
+
+</html>
